@@ -1,4 +1,4 @@
-# Electronics ProShop eCommerce Platform
+# ElectroShop eCommerce Platform
 
 > eCommerce platform built with the MERN stack & Redux.
 
@@ -22,6 +22,10 @@
 - ...
 
 ## Usage
+
+**Backend**: Node.js, Express, MongoDB, JWT
+
+**Fronend**: React.js (HTML, JavaScript, CSS), Redux
 
 ### ES Modules in Node
 
