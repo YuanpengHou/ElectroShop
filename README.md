@@ -1,4 +1,4 @@
-# ElectroShop eCommerce Platform
+# YuanpengShop eCommerce Platform
 
 eCommerce platform built with the MERN stack & Redux.
 
@@ -6,7 +6,7 @@ eCommerce platform built with the MERN stack & Redux.
 
 **Backend**: Node.js, Express, MongoDB, JWT
 
-## MERN Architecture Diagram
+## MERN stack Architecture Diagram
 
 <img src="uploads/mern.png" width="520" height="320"/>
 
