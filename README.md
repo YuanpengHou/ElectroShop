@@ -8,15 +8,15 @@ eCommerce platform built with the MERN stack & Redux.
 
 ## MERN Architecture Diagram
 
-<img src="uploads/mern.png" width="500" height="290"/>
+<img src="uploads/mern.png" width="510" height="290"/>
 
 ## Redux
 
-<img src="uploads/redux.png" width="500" height="290"/>
+<img src="uploads/redux.png" width="510" height="290"/>
 
 ## JWT
 
-<img src="uploads/jwt.jpg" width="500" height="290"/>
+<img src="uploads/jwt.jpg" width="510" height="290"/>
 
 ## Features
 
