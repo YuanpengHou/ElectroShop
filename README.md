@@ -37,7 +37,7 @@ eCommerce platform built with the MERN stack & Redux.
 
 ## Demo
 
-<img src="uploads/demo.png" width="610" height="460"/>
+<img src="uploads/demo.png" width="720" height="650"/>
 
 ### ES Modules in Node
 
