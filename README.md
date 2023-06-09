@@ -1,12 +1,15 @@
-# YuanpengShop eCommerce Platform
+# YuanpengShop
 
-eCommerce platform built with the MERN stack & Redux.
+An eCommerce platform built with the MERN stack & Redux.
+
+## Architecture Diagram
 
 **Fronend**: React.js (HTML, JavaScript, CSS), Redux, Material UI
 
 **Backend**: Node.js, Express, MongoDB, JWT
 
-## MERN stack Architecture Diagram
+
+## MERN stack
 
 <img src="uploads/mern.png" width="520" height="320"/>
 
