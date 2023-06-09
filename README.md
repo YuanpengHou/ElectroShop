@@ -19,7 +19,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 ## JWT
 
-<img src="uploads/jwt.jpg" width="510" height="290"/>
+<img src="uploads/jwt.jpg" width="525" height="300"/>
 
 ## Features
 
