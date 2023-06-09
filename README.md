@@ -8,7 +8,7 @@ eCommerce platform built with the MERN stack & Redux.
 
 ## MERN Architecture Diagram
 
-<img src="uploads/mern.png" width="520" height="300"/>
+<img src="uploads/mern.png" width="520" height="320"/>
 
 ## Redux
 
