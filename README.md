@@ -1,6 +1,8 @@
 # ElectroShop eCommerce Platform
 
-## eCommerce platform built with the MERN stack & Redux.
+eCommerce platform built with the MERN stack & Redux.
+
+## Architecture Diagram
 ![Alt text](uploads/mern.png "Optional title")
 
 ## Features
