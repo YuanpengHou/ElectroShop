@@ -4,7 +4,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 ## Architecture Diagram
 
-**Fronend**: React.js (HTML, JavaScript, CSS), Redux, Material UI
+**Frontend**: React.js (HTML, JavaScript, CSS), Redux, Material UI
 
 **Backend**: Node.js, Express, MongoDB, JWT
 
