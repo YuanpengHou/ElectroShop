@@ -38,7 +38,7 @@ An eCommerce platform built with the MERN stack & Redux.
 - Database seeder (products & users)
 - ...
 
-## Demo
+## App Demo
 
 <img src="uploads/demo.png" width="700" height="560"/>
 
