@@ -1,0 +1,30 @@
+# This is the a file for react app to deploy to Google App Engine on Google Cloud Platfrom.
+
+# Head into the root directory of your react application and create an app.yaml file.
+# This is where we configure our application settings for App Engine. It contains information about our code, runtime, URL paths and more.
+# You configure your App Engine app's settings in the app.yaml configuration file. Your config file must specify at least a runtime entry.
+# Each service in your app has its own app.yaml file, which acts as a descriptor for its deployment.
+# You must first create the app.yaml file for the default service before you can create and deploy app.yaml files
+# for additional services within your app. To learn more about structuring multiple services in your app,
+# see Structuring Web Services in App Engine.
+# Syntax:
+# The syntax of app.yaml is the YAML format.
+# The YAML format supports comments. A line that begins with a pound (#) character is ignored:
+# # This is a comment.
+# URL and file path patterns use POSIX extended regular expression syntax, excluding collating elements and collation classes.
+# Back-references to grouped matches (e.g. \1) are supported, as are these Perl extensions: \w \W \s \S \d \D.
+
+runtime: nodejs20 # or another supported version
+
+# instance_class: F2
+
+# env_variables:
+#   BUCKET_NAME: "example-gcs-bucket"
+
+handlers:
+  - url: /
+    static_files: frontend/public/index.html
+    upload: frontend/public/index.html
+
+  - url: /
+    static_dir: frontend/public
