@@ -52,6 +52,7 @@ You can also install and setup Babel if you would like
 
 - Create a MongoDB database and obtain your `MongoDB URI` - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
 - Create a PayPal account and obtain your `Client ID` - [PayPal Developer](https://developer.paypal.com/)
+- Render: Cloud Application Hosting for Developers - [Render.com](https://render.com)
 
 ### Env Variables
 
