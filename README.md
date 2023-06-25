@@ -39,7 +39,6 @@ An eCommerce platform built with the MERN stack & Redux.
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
 - Database seeder (products & users)
-- ...
 
 ### ES Modules in Node
 
@@ -48,6 +47,11 @@ We use ECMAScript Modules in the backend in this project. Be sure to have at lea
 Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
 
 You can also install and setup Babel if you would like
+
+## Usage
+
+- Create a MongoDB database and obtain your `MongoDB URI` - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
+- Create a PayPal account and obtain your `Client ID` - [PayPal Developer](https://developer.paypal.com/)
 
 ### Env Variables
 
@@ -59,7 +63,13 @@ PORT = 5000
 MONGO_URI = your mongodb uri
 JWT_SECRET = 'abc123'
 PAYPAL_CLIENT_ID = your paypal client id
+
+Change the values to what you want
 ```
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### Install Dependencies (frontend & backend)
 
