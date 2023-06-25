@@ -14,13 +14,37 @@ An eCommerce platform built with the MERN stack & Redux.
 
 ## MERN stack
 
+MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+
+- MongoDB — document database
+- Express(.js) — Node.js web framework
+- React(.js) — a client-side JavaScript framework
+- Node(.js) — the premier JavaScript web server
+
+Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js is the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
+
 <img src="uploads/mern.png" width="520" height="320"/>
 
 ## Redux
 
+Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion.
+
+- State, the source of truth that drives our app;
+- View, a declarative description of the UI based on the current state
+- Actions, the events that occur in the app based on user input, and trigger updates in the state
+- Action creator is a function that creates and returns an action object. 
+- Reducer is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state: (state, action) => newState. You can think of a reducer as an event listener which handles events based on the received action (event) type.
+- Store, the current Redux application state lives in an object called the store. The store is created by passing in a reducer, and has a method called getState that returns the current state value.
+- Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call store.dispatch() and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value.
+- Selectors, are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data.
+
 <img src="uploads/redux.png" width="510" height="290"/>
 
 ## JWT
+
+JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID to share user-related information. It’s also a popular way to authenticate/authorize users in a microservice architecture.
+
+- JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a client-side-based stateless session, this means the server doesn’t have to completely rely on a data store (or) database to save session information. JWTs can be encrypted, but they are typically encoded & signed.  We will be focusing on Signed JWTs. The purpose of Signed JWT is not to hide the data but to ensure the authenticity of the data. And that is why it’s highly recommended to use HTTPS with Signed JWTs.
 
 <img src="uploads/jwt.jpg" width="525" height="300"/>
 
