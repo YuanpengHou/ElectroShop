@@ -2,12 +2,15 @@
 
 An eCommerce platform built with the MERN stack & Redux.
 
+## App Demo
+
+<img src="uploads/demo.gif" width="600"/>
+
 ## Architecture Diagram
 
 **Frontend**: React.js (HTML, JavaScript, CSS), Redux, Material UI
 
 **Backend**: Node.js, Express, MongoDB, JWT
-
 
 ## MERN stack
 
@@ -37,10 +40,6 @@ An eCommerce platform built with the MERN stack & Redux.
 - PayPal / credit card integration
 - Database seeder (products & users)
 - ...
-
-## App Demo
-
-<img src="uploads/demo.png" width="700" height="560"/>
 
 ### ES Modules in Node
 
