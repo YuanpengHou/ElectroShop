@@ -1,3 +1,4 @@
+// Then entrance of this project. The project runs from here.
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -7,6 +8,7 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
+// Render the root components whose name is App.js to DOM (./public/index.html) 
 ReactDOM.render(
   <Provider store={store}>
     <App />
