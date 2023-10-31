@@ -90,10 +90,26 @@ Redux is a pattern and library for managing and updating application state, usin
   console.log(currentValue)
   // 2
   ```
-- thunkMiddleware from 'redux-thunk'. Redux has an official version of that "async function middleware", called the Redux "Thunk" middleware. The thunk middleware allows us to write functions that get dispatch and getState as arguments. The thunk functions can have any async logic we want inside, and that logic can dispatch actions and read the store state as needed. Writing async logic as thunk functions allows us to reuse that logic without knowing what Redux store we're using ahead of time.
+- thunkMiddleware from 'redux-thunk'. Redux has an official version of that "async function middleware", called the Redux "Thunk" middleware. The thunk middleware allows us to write functions that get dispatch and getState as arguments. The thunk functions can have any async logic we want inside, and that logic can dispatch actions and read the store state as needed. Writing async logic as thunk functions allows us to reuse that logic without knowing what Redux store we're using ahead of time. Please see [Using the Redux Thunk Middleware](https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware) for more detail.
+  
+  src/store.js
+  ```
+  import { createStore, applyMiddleware } from 'redux'
+  import thunkMiddleware from 'redux-thunk'
+  import { composeWithDevTools } from 'redux-devtools-extension'
+  import rootReducer from './reducer'
+
+  // Configuring the Store
+  const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
+  // The store now has the ability to accept thunk functions in `dispatch`
+  const store = createStore(rootReducer, composedEnhancer)
+  export default store
+  ```
+  src/features/todos/todosSlice.js
   ```
   import { client } from '../../api/client'
-  
+
+  // Fetching Todos from a Server
   const initialState = []
   export default function todosReducer(state = initialState, action) {
     // omit reducer logic
@@ -104,6 +120,30 @@ Redux is a pattern and library for managing and updating application state, usin
     dispatch({ type: 'todos/todosLoaded', payload: response.todos })
   }
   ```
+  src/index.js
+  ```
+  import React from 'react'
+  import ReactDOM from 'react-dom'
+  import { Provider } from 'react-redux'
+  import './index.css'
+  import App from './App'
+  
+  import './api/server'
+  
+  import store from './store'
+  import { fetchTodos } from './features/todos/todosSlice'
+  
+  store.dispatch(fetchTodos)
+  
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  )
+  ``` 
   
 <img src="uploads/redux.png" width="510" height="290"/>
 
