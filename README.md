@@ -25,6 +25,14 @@ Express and Node make up the middle (application) tier. Express.js is a server-s
 
 <img src="uploads/mern.png" width="520" height="320"/>
 
+## React
+
+React is a JavaScript library created by Facebook
+
+React is a User Interface (UI) library and is a tool for building UI components
+
+<img src="uploads/react_figure.png" width="520" height="320"/>
+
 ## Redux
 
 Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion.
@@ -39,6 +47,10 @@ Redux is a pattern and library for managing and updating application state, usin
 - Selectors, are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data.
 
 <img src="uploads/redux.png" width="510" height="290"/>
+
+
+## Node.js
+
 
 ## JWT
 
