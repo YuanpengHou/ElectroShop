@@ -60,6 +60,9 @@ Redux is a pattern and library for managing and updating application state, usin
   }
   ```
 - Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call ``` store.dispatch()```  and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call ``` getState() ``` to retrieve the updated value. We can read data from the store with ``` useSelector ```
+  ```
+  store.dispatch({ type: 'counter/incremented' })
+  ```
 - Reducer, is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state. You can think of a reducer as an event listener which handles events based on the received action (event) type. Here is an example of how reducers work in Redux:
   ```
   const CounterReducer = (state = initialState, action) => {
@@ -76,11 +79,37 @@ Redux is a pattern and library for managing and updating application state, usin
   ```
 - Store, the current Redux application state lives in an object called the store. The store is created by passing in a reducer and has a method called getState that returns the current state value.
   ```
-  const store = Redux.createStore(reducer)
+  const store = createStore { reducer: counterReducer })
+  console.log(store.getState())
+  // {value: 0}
   ```
 - Selectors, are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data.
-
+  ```
+  const selectCounterValue = state => state.value
+  const currentValue = selectCounterValue(store.getState())
+  console.log(currentValue)
+  // 2
+  ```
+  
 <img src="uploads/redux.png" width="510" height="290"/>
+
+For Redux specifically, we can describe the sequence of steps to update the app detail:
+
+- Initial setup:
+A Redux store is created using a root reducer function
+The store calls the root reducer once, and saves the return value as its initial state
+When the UI is first rendered, UI components access the current state of the Redux store, and use that data to decide what to render. They also subscribe to any future store updates so they can know if the state has changed.
+- Updates:
+Something happens in the app, such as a user clicking a button
+The app code dispatches an action to the Redux store, like dispatch({type: 'counter/incremented'})
+The store runs the reducer function again with the previous state and the current action, and saves the return value as the new state
+The store notifies all parts of the UI that are subscribed that the store has been updated
+Each UI component that needs data from the store checks to see if the parts of the state they need have changed.
+Each component that sees its data has changed forces a re-render with the new data, so it can update what's shown on the screen
+
+Here's what that data flow looks like visually:
+
+<img src="uploads/redux_flow.png" width="510" height="290"/>
 
 
 ## Node.js
