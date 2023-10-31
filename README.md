@@ -4,7 +4,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 ## App Demo
 
-<img src="uploads/demo.gif" width="700"/>
+<img src="uploads/demo.gif" width="800"/>
 
 ## Architecture Diagram
 
