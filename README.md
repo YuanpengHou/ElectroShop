@@ -90,6 +90,20 @@ Redux is a pattern and library for managing and updating application state, usin
   console.log(currentValue)
   // 2
   ```
+- thunkMiddleware from 'redux-thunk'. Redux has an official version of that "async function middleware", called the Redux "Thunk" middleware. The thunk middleware allows us to write functions that get dispatch and getState as arguments. The thunk functions can have any async logic we want inside, and that logic can dispatch actions and read the store state as needed. Writing async logic as thunk functions allows us to reuse that logic without knowing what Redux store we're using ahead of time.
+  ```
+  import { client } from '../../api/client'
+  
+  const initialState = []
+  export default function todosReducer(state = initialState, action) {
+    // omit reducer logic
+  }
+  // Thunk function
+  export async function fetchTodos(dispatch, getState) {
+    const response = await client.get('/fakeApi/todos')
+    dispatch({ type: 'todos/todosLoaded', payload: response.todos })
+  }
+  ```
   
 <img src="uploads/redux.png" width="510" height="290"/>
 
@@ -102,10 +116,11 @@ For Redux specifically, we can describe the sequence of steps to update the app 
 - Updates:
 4. Something happens in the app, such as a user clicking a button.
 5. The app code dispatches an action to the Redux store, like dispatch({type: 'counter/incremented'}).
-6. The store runs the reducer function again with the previous state and the current action, and saves the return value as the new state.
-7. The store notifies all parts of the UI that are subscribed that the store has been updated.
-8. Each UI component that needs data from the store checks to see if the parts of the state they need have changed.
-9. Each component that sees its data has changed forces a re-render with the new data, so it can update what's shown on the screen.
+6. Once that dispatched value reaches a middleware, it can make an async call, and then dispatch a real action object when the async call completes.
+8. The store runs the reducer function again with the previous state and the current action, and saves the return value as the new state.
+9. The store notifies all parts of the UI that are subscribed that the store has been updated.
+10. Each UI component that needs data from the store checks to see if the parts of the state they need have changed.
+11. Each component that sees its data has changed forces a re-render with the new data, so it can update what's shown on the screen.
 
 Here's what that data flow looks like visually:
 
