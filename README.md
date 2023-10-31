@@ -174,6 +174,14 @@ Axios is a HTTP client, which means it's used to make requests. It works both in
 ## Node.js
 
 
+Express.js is used to create HTTP server applications. That means something that runs on a machine somewhere that responds to requests. It is designed for building web applications and APIs. Some of the features it provides includes:
+
+- Allows to set up middlewares to respond to HTTP Requests. These middlewares work according to the sequence of implementation
+- Defines routing which is used to perform different actions based on HTTP Verbs and URLs.
+- Allows to dynamically render HTML Pages using templates.
+
+
+
 ## JWT
 
 JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID and microservice architecture to share user-related information.
