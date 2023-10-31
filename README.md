@@ -168,6 +168,9 @@ Here's what that data flow looks like visually:
 ## Axios
 
 
+Axios is a HTTP client, which means it's used to make requests. It works both in Node and in the browser and exposes a Promise interface.
+
+
 ## Node.js
 
 
