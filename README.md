@@ -127,9 +127,7 @@ Redux is a pattern and library for managing and updating application state, usin
   import { Provider } from 'react-redux'
   import './index.css'
   import App from './App'
-  
   import './api/server'
-  
   import store from './store'
   import { fetchTodos } from './features/todos/todosSlice'
   
