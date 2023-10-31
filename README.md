@@ -27,9 +27,9 @@ Express and Node make up the middle (application) tier. Express.js is a server-s
 
 ## React
 
-React is a JavaScript library created by Facebook
+React is a JavaScript library created by Facebook.
 
-React is a User Interface (UI) library and is a tool for building UI components
+React is a User Interface (UI) library and is a tool for building UI components.
 
 <img src="uploads/react_figure.png" width="520" height="320"/>
 
@@ -37,13 +37,47 @@ React is a User Interface (UI) library and is a tool for building UI components
 
 Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion.
 
-- State, the source of truth that drives our app;
+- State, the source of truth that drives our app
 - View, a declarative description of the UI based on the current state
-- Actions, the events that occur in the app based on user input, and trigger updates in the state
-- Action creator is a function that creates and returns an action object.
-- Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call store.dispatch() and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value.
-- Reducer is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state: (state, action) => newState. You can think of a reducer as an event listener which handles events based on the received action (event) type.
-- Store, the current Redux application state lives in an object called the store. The store is created by passing in a reducer, and has a method called getState that returns the current state value.
+- Action, the events that occur in the app based on user input, and trigger updates in the state. Actions are plain JavaScript objects that must have: 1. A type property to indicate the type of action to be carried out 2. A payload object that contains the information that should be used to change the state. Here’s an example of an action:
+  ```
+  const addAction = { 
+    type: "INCREMENT",
+    payload: {
+      incrementBy: 5,
+    }
+  }
+  ```
+- Action creator, is a function that creates and returns an action object. And here is an example of an action creator. It is just a helper function that returns the action:
+  ```
+  const getIncrementAction = (numberToIncrement) => {
+    return {
+      type: "INCREMENT",
+      payload: {
+        incrementBy: numberToIncrement,
+      }
+    }
+  }
+  ```
+- Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call ``` store.dispatch()```  and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call ``` getState() ``` to retrieve the updated value. We can read data from the store with ``` useSelector ```
+- Reducer, is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state. You can think of a reducer as an event listener which handles events based on the received action (event) type. Here is an example of how reducers work in Redux:
+  ```
+  const CounterReducer = (state = initialState, action) => {
+      switch (action.type) {
+        // This reducer handles any action with type "LOGIN"
+        case "INCREMENT":
+            return state + action.incrementBy ? action.incrementBy : 1
+        case "DECREMENT":
+            return state + action.decrementBy ? action.decrementBy : 1
+        default:
+            return state
+        } 
+  }
+  ```
+- Store, the current Redux application state lives in an object called the store. The store is created by passing in a reducer and has a method called getState that returns the current state value.
+  ```
+  const store = Redux.createStore(reducer)
+  ```
 - Selectors, are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data.
 
 <img src="uploads/redux.png" width="510" height="290"/>
