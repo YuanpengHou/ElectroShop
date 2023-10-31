@@ -168,13 +168,13 @@ Here's what that data flow looks like visually:
 ## Axios
 
 
-Axios is a HTTP client, which means it's used to make **requests**. It works both in Node and in the browser and exposes a Promise interface.
+Axios is a HTTP client, which means it's used to make ***requests***. It works both in Node and in the browser and exposes a Promise interface.
 
 
 ## Node.js
 
 
-Express.js is used to create HTTP server applications. That means something that runs on a machine somewhere that **responds** to requests. It is designed for building web applications and APIs. Some of the features it provides includes:
+Express.js is used to create HTTP server applications. That means something that runs on a machine somewhere that ***responds*** to requests. It is designed for building web applications and APIs. Some of the features it provides includes:
 
 - Allows to set up middlewares to respond to HTTP Requests. These middlewares work according to the sequence of implementation
 - Defines routing which is used to perform different actions based on HTTP Verbs and URLs.
