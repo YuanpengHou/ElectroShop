@@ -8,7 +8,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 ## Architecture Diagram
 
-**Frontend**: React.js (HTML, CSS, JavaScript), Redux, Material UI
+**Frontend**: React.js (HTML, CSS, JavaScript), Redux, Axios
 
 **Backend**: Node.js, Express, MongoDB, JWT
 
@@ -163,6 +163,9 @@ For Redux specifically, we can describe the sequence of steps to update the app 
 Here's what that data flow looks like visually:
 
 <img src="uploads/redux_flow.gif" width="580" height="370"/>
+
+
+## Axios
 
 
 ## Node.js
