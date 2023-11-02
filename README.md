@@ -59,7 +59,7 @@ Redux is a pattern and library for managing and updating application state, usin
     }
   }
   ```
-- Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call ``` store.dispatch()```  and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call ``` getState() ``` to retrieve the updated value. We can read data from the store with ``` useSelector ```
+- Dispatch, the Redux store has a method called dispatch. The only way to update the state is to call ``` store.dispatch()```  and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call ``` getState() ``` to retrieve the updated value. We can read data from the store with ``` useSelector() ```
   ```
   store.dispatch({ type: 'counter/incremented' })
   ```
@@ -153,7 +153,7 @@ For Redux specifically, we can describe the sequence of steps to update the app 
 3. When the UI is first rendered, UI components access the current state of the Redux store, and use that data to decide what to render. They also subscribe to any future store updates so they can know if the state has changed.
 - Updates:
 4. Something happens in the app, such as a user clicking a button.
-5. The app code dispatches an action to the Redux store, like dispatch({type: 'counter/incremented'}).
+5. The app code dispatches an action to the Redux store, like ```dispatch({type: 'counter/incremented'})```.
 6. Once that dispatched value reaches a middleware, it can make an async call, and then dispatch a real action object when the async call completes.
 8. The store runs the reducer function again with the previous state and the current action, and saves the return value as the new state.
 9. The store notifies all parts of the UI that are subscribed that the store has been updated.
@@ -186,9 +186,10 @@ MongoDB is a popular document-oriented database that stores data in collections 
 
 Mongoose, on the other hand, is an Object Data Modeling (ODM) library that provides a higher-level abstraction layer on top of MongoDB. It allows developers to define their data models using a schema-based approach and provides a rich set of features that simplify the process of working with MongoDB, such as middleware functions to assist in handling pre-and post-processing of data, virtual properties enable developers to define computed fields, query builders to help construct complex queries with ease, and schema validation to apply validation rules to ensure data integrity and consistency. Together, MongoDB and Mongoose provide a powerful solution for managing data in modern web applications.
 
-A schema in Mongoose is a blueprint that defines the structure and rules for a collection in a MongoDB database. It specifies the fields that a document in the collection should have, along with their data types and any validation rules that apply. Schemas can also define default values for fields and specify whether a field is required or optional. Once a schema is defined, it can be used to create a model, which is a constructor function that enables developers to create and manipulate documents in the corresponding MongoDB collection. A model in Mongoose is created by calling the mongoose. model() method and passing in the name of the collection and the corresponding schema.
+A schema in Mongoose is a blueprint that defines the structure and rules for a collection in a MongoDB database. It specifies the fields that a document in the collection should have, along with their data types and any validation rules that apply. Schemas can also define default values for fields and specify whether a field is required or optional. Once a schema is defined, it can be used to create a model, which is a constructor function that enables developers to create and manipulate documents in the corresponding MongoDB collection. A model in Mongoose is created by calling the ```mongoose. model()``` method and passing in the name of the collection and the corresponding schema.
 
-Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as find(), findOne(), and aggregate(), that enable developers to retrieve and manipulate data flexibly and efficiently.
+Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as ```find()```, ```findOne()```, and 
+```aggregate()```, that enable developers to retrieve and manipulate data flexibly and efficiently.
 
 
 ## JWT
