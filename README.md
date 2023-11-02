@@ -12,7 +12,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 **Backend**: Node.js, Express.js, Mongoose, MongoDB, JWT
 
-**Developer Tools**: Visual Studio Code, Git/Github, Render Cloud
+**Developer Tools**: Visual Studio Code, Postman, Git/Github, Render Cloud
 
 
 ## MERN stack
