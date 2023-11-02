@@ -182,11 +182,19 @@ Express.js is used to create HTTP server applications. That means something that
 
 ## MongoDB & Mongoose
 
+**MongoDB**
+
 MongoDB is a popular document-oriented database that stores data in collections of JSON-like documents. It provides a flexible and scalable way to store data, making it ideal for building web applications and other data-driven systems.
+
+**Mongoose**
 
 Mongoose, on the other hand, is an Object Data Modeling (ODM) library that provides a higher-level abstraction layer on top of MongoDB. It allows developers to define their data models using a schema-based approach and provides a rich set of features that simplify the process of working with MongoDB, such as middleware functions to assist in handling pre-and post-processing of data, virtual properties enable developers to define computed fields, query builders to help construct complex queries with ease, and schema validation to apply validation rules to ensure data integrity and consistency. Together, MongoDB and Mongoose provide a powerful solution for managing data in modern web applications.
 
+**Schema**
+
 A schema in Mongoose is a blueprint that defines the structure and rules for a collection in a MongoDB database. It specifies the fields that a document in the collection should have, along with their data types and any validation rules that apply. Schemas can also define default values for fields and specify whether a field is required or optional. Once a schema is defined, it can be used to create a model, which is a constructor function that enables developers to create and manipulate documents in the corresponding MongoDB collection. A model in Mongoose is created by calling the ```mongoose. model()``` method and passing in the name of the collection and the corresponding schema.
+
+**CRUD Operations**
 
 Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as ```find()```, ```findOne()```, and 
 ```aggregate()```, that enable developers to retrieve and manipulate data flexibly and efficiently.
