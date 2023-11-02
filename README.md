@@ -12,6 +12,9 @@ An eCommerce platform built with the MERN stack & Redux.
 
 **Backend**: Node.js, Express.js, Mongoose, MongoDB, JWT
 
+**Developer Tools**: Visual Studio Code, Git/Github, Render Cloud
+
+
 ## MERN stack
 
 MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
