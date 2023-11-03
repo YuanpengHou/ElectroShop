@@ -203,6 +203,40 @@ A schema in Mongoose is a blueprint that defines the structure and rules for a c
 Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as ```find()```, ```findOne()```, and 
 ```aggregate()```, that enable developers to retrieve and manipulate data flexibly and efficiently.
 
+**Benefits of NoSQL databases**
+
+- Flexible data models
+
+NoSQL databases typically have very flexible schemas. A flexible schema allows you to easily make changes to your database as requirements change. You can iterate quickly and continuously integrate new application features to provide value to your users faster.
+
+- Horizontal scaling
+
+Most SQL databases require you to scale-up vertically (migrate to a larger, more expensive server) when you exceed the capacity requirements of your current server. Conversely, most NoSQL databases allow you to scale-out horizontally, meaning you can add cheaper commodity servers whenever you need to.
+
+- Fast queries
+
+Queries in NoSQL databases can be faster than SQL databases. Why? Data in SQL databases is typically normalized, so queries for a single object or entity require you to join data from multiple tables. As your tables grow in size, the joins can become expensive. However, data in NoSQL databases is typically stored in a way that is optimized for queries. The rule of thumb when you use MongoDB is data that is accessed together should be stored together. Queries typically do not require joins, so the queries are very fast.
+
+- Easy for developers
+
+Some NoSQL databases like MongoDB map their data structures to those of popular programming languages. This mapping allows developers to store their data in the same way that they use it in their application code. While it may seem like a trivial advantage, this mapping can allow developers to write less code, leading to faster development time and fewer bugs.
+
+**Drawbacks of NoSQL databases**
+
+- ACID transactions
+
+NoSQL databases don’t support ACID (atomicity, consistency, isolation, durability) transactions across multiple documents. With appropriate schema design, single-record atomicity is acceptable for lots of applications. However, there are still many applications that require ACID across multiple records.
+
+To address these use cases, MongoDB added support for  multi-document ACID transactions in the 4.0 release, and extended them in 4.2 to span sharded clusters.
+
+- No joins query
+
+MongoDB doesn’t support Joins like relational databases. That means you’ll need to update the schema of the database frequently based on how you access data.
+
+- Larger storage
+
+As MongoDB stores keys for each value pair, the data redundancy results in high memory usage. Since data models in NoSQL databases are typically optimized for queries and not for reducing data duplication, NoSQL databases can be larger than SQL databases. Storage is currently so cheap that most consider this a minor drawback, and some NoSQL databases also support compression to reduce the storage footprint. 
+
 
 ## JWT
 
