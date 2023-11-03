@@ -225,9 +225,7 @@ Some NoSQL databases like MongoDB map their data structures to those of popular 
 
 - ACID transactions
 
-NoSQL databases don’t support ACID (atomicity, consistency, isolation, durability) transactions across multiple documents. With appropriate schema design, single-record atomicity is acceptable for lots of applications. However, there are still many applications that require ACID across multiple records.
-
-To address these use cases, MongoDB added support for  multi-document ACID transactions in the 4.0 release, and extended them in 4.2 to span sharded clusters.
+NoSQL databases don’t support ACID (atomicity, consistency, isolation, durability) transactions across multiple documents. With appropriate schema design, single-record atomicity is acceptable for lots of applications. However, there are still many applications that require ACID across multiple records. To address these use cases, MongoDB added support for  multi-document ACID transactions in the 4.0 release, and extended them in 4.2 to span sharded clusters.
 
 - No joins query
 
