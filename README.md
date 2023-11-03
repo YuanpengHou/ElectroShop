@@ -146,7 +146,7 @@ Redux is a pattern and library for managing and updating application state, usin
   )
   ``` 
   
-<img src="uploads/redux.png" width="510" height="290"/>
+<img src="uploads/redux.png" width="580" height="320"/>
 
 For Redux specifically, we can describe the sequence of steps to update the app detail:
 
@@ -202,6 +202,8 @@ A schema in Mongoose is a blueprint that defines the structure and rules for a c
 
 Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as ```find()```, ```findOne()```, and 
 ```aggregate()```, that enable developers to retrieve and manipulate data flexibly and efficiently.
+
+<img src="uploads/MongoDB.png" width="800" height="250"/>
 
 **Benefits of NoSQL databases**
 
