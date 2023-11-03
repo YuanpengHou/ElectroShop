@@ -26,7 +26,7 @@ MERN stands for MongoDB, Express, React, Node, after the four key technologies t
 
 Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js is the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
 
-<img src="uploads/mern.png" width="520" height="320"/>
+<img src="uploads/mern.png" width="550" height="350"/>
 
 ## React
 
@@ -34,7 +34,7 @@ React is a JavaScript library created by Facebook.
 
 React is a User Interface (UI) library and is a tool for building UI components.
 
-<img src="uploads/react_figure.png" width="520" height="320"/>
+<img src="uploads/react_figure.png" width="550" height="350"/>
 
 ## Redux
 
@@ -221,17 +221,19 @@ Models can be used to perform a wide range of operations on a MongoDB database, 
 
 JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID and microservice architecture to share user-related information.
 
+<img src="uploads/JWTStructure.png" width="650" height="400"/>
+
 JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a client-side-based stateless session, this means the server doesn’t have to completely rely on a data store (or) database to save session information. JWTs can be encrypted, but they are typically encoded & signed.  We will be focusing on Signed JWTs. The purpose of Signed JWT is not to hide the data but to ensure the authenticity of the data. And that is why it’s highly recommended to use HTTPS with Signed JWTs.
 
-<img src="uploads/jwt.jpg" width="525" height="300"/>
+<img src="uploads/jwt.jpg" width="600" height="350"/>
 
 The JWT authorization workflow is as follows:
-1.The end user logs in, the client application sends an authentication request to API Gateway or to any third-party JWT issuer, to obtain a JWT token.
-2.If API Gateway is the JWT issuer, then it validates the user or the application. If the user or application credentials are valid, API Gateway generates the JSON token using a private key that was specified in the JWT configuration, and sends the generated token to the client.
+
+1. The end user logs in, the client application sends an authentication request to API Gateway or to any third-party JWT issuer, to obtain a JWT token.
+2. If API Gateway is the JWT issuer, then it validates the user or the application. If the user or application credentials are valid, API Gateway generates the JSON token using a private key that was specified in the JWT configuration, and sends the generated token to the client.
 If the user credentials are invalid, API Gateway returns a specific error response.
-3.Client sends the generated JSON token in the HTTP Authorization request header as a Bearer token to access the protected API in API Gateway.
-4.API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the public certificate of the issuer (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources.
-If the validation fails, API Gateway returns a specific error response.
+3. Client sends the generated JSON token in the HTTP Authorization request header as a Bearer token to access the protected API in API Gateway.
+4. API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the public certificate of the issuer (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources. If the validation fails, API Gateway returns a specific error response.
 
 ## Features
 
