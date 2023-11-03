@@ -225,6 +225,14 @@ JWT authentication is a token-based stateless authentication mechanism. It is po
 
 <img src="uploads/jwt.jpg" width="525" height="300"/>
 
+The JWT authorization workflow is as follows:
+1.The end user logs in, the client application sends an authentication request to API Gateway or to any third-party JWT issuer, to obtain a JWT token.
+2.If API Gateway is the JWT issuer, then it validates the user or the application. If the user or application credentials are valid, API Gateway generates the JSON token using a private key that was specified in the JWT configuration, and sends the generated token to the client.
+If the user credentials are invalid, API Gateway returns a specific error response.
+3.Client sends the generated JSON token in the HTTP Authorization request header as a Bearer token to access the protected API in API Gateway.
+4.API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the public certificate of the issuer (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources.
+If the validation fails, API Gateway returns a specific error response.
+
 ## Features
 
 - Full featured shopping cart
