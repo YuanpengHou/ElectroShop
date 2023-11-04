@@ -248,6 +248,9 @@ If the user credentials are invalid, API Gateway returns a specific error respon
 4. API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the public certificate of the issuer (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources. If the validation fails, API Gateway returns a specific error response.
 
 
+## Test
+
+
 ## Potential Improvement
 
 
