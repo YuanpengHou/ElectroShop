@@ -36,6 +36,12 @@ React is a User Interface (UI) library and is a tool for building UI components.
 
 <img src="uploads/react_figure.png" width="550" height="350"/>
 
+**Asynchronous**
+
+async, await, promise
+
+cart, order, shipping
+
 ## Redux
 
 Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion.
