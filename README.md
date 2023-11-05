@@ -206,7 +206,7 @@ Mongoose, on the other hand, is an Object Data Modeling (ODM) library that provi
 
 **Schema**
 
-A schema in Mongoose is a blueprint that defines the structure and rules for a collection in a MongoDB database. It specifies the fields that a document in the collection should have, along with their data types and any validation rules that apply. Schemas can also define default values for fields and specify whether a field is required or optional. Once a schema is defined, it can be used to create a model, which is a constructor function that enables developers to create and manipulate documents in the corresponding MongoDB collection. A model in Mongoose is created by calling the ```mongoose. model()``` method and passing in the name of the collection and the corresponding schema.
+A schema in Mongoose is a blueprint that defines the structure and rules for a collection in a MongoDB database. It specifies the fields that a document in the collection should have, along with their data types and any validation rules that apply. Schemas can also define default values for fields and specify whether a field is required or optional. Once a schema is defined, it can be used to create a model, which is a constructor function that enables developers to create and manipulate documents in the corresponding MongoDB collection. **A model** in Mongoose is created by calling the ```mongoose. model()``` method and passing in the name of the collection and the corresponding schema.
 
 **CRUD Operations**
 
@@ -246,7 +246,7 @@ The JWT authorization workflow is as follows:
 If the user credentials are invalid, API Gateway returns a specific error response.
 4. The client saves the JWT to the **LocalStorage or SessionStorage** in the **browser of the client**.
 4. When the client sends a request again, it sends the generated JSON token in the **HTTP Authorization request header** as a Bearer token to access the protected API in API Gateway.
-5. API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the **public certificate of the issuer**
+5. API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the **public certificate of the issuer**.
 6.  (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources. If the validation fails, API Gateway returns a specific error response.
 
 
