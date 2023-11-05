@@ -233,7 +233,7 @@ Models can be used to perform a wide range of operations on a MongoDB database, 
 
 JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID and microservice architecture to share user-related information.
 
-<img src="uploads/JWTStructure.png" width="650" height="400"/>
+<img src="uploads/jwts.png" width="650" height="400"/>
 
 JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a client-side-based stateless session, this means the server doesn’t have to completely rely on a data store (or) database to save session information. JWTs can be encrypted, but they are typically encoded & signed.  We will be focusing on Signed JWTs. The purpose of Signed JWT is not to hide the data but to ensure the authenticity of the data. And that is why it’s highly recommended to use HTTPS with Signed JWTs.
 
