@@ -181,7 +181,7 @@ Here's what that data flow looks like visually:
 ## Axios
 
 
-Axios is a HTTP client, which means it's used to make ***requests***. It works both in Node and in the browser and exposes a Promise interface.
+Axios is an HTTP client, which means it's used to make ***requests***. It works both in Node and in the browser and exposes a Promise interface.
 
 
 ## Node.js
@@ -211,7 +211,7 @@ A schema in Mongoose is a blueprint that defines the structure and rules for a c
 **CRUD Operations**
 
 Models can be used to perform a wide range of operations on a MongoDB database, such as creating, reading, updating, and deleting documents. They also support a variety of query building and execution features, such as ```find()```, ```findOne()```, and 
-```aggregate()```, that enable developers to retrieve and manipulate data flexibly and efficiently.
+```aggregate()```, which enables developers to retrieve and manipulate data flexibly and efficiently.
 
 <img src="uploads/MongoDB.png" width="800" height="250"/>
 
@@ -219,7 +219,7 @@ Models can be used to perform a wide range of operations on a MongoDB database, 
 
 - Flexible data models: NoSQL databases typically have very flexible schemas. A flexible schema allows you to easily make changes to your database as requirements change. You can iterate quickly and continuously integrate new application features to provide value to your users faster.
 - Horizontal scaling: Most SQL databases require you to scale-up vertically (migrate to a larger, more expensive server) when you exceed the capacity requirements of your current server. Conversely, most NoSQL databases allow you to scale-out horizontally, meaning you can add cheaper commodity servers whenever you need to.
-- Fast queries: Queries in NoSQL databases can be faster than SQL databases. Why? Data in SQL databases is typically normalized, so queries for a single object or entity require you to join data from multiple tables. As your tables grow in size, the joins can become expensive. However, data in NoSQL databases is typically stored in a way that is optimized for queries. The rule of thumb when you use MongoDB is data that is accessed together should be stored together. Queries typically do not require joins, so the queries are very fast.
+- Fast queries: Queries in NoSQL databases can be faster than in SQL databases. Why? Data in SQL databases is typically normalized, so queries for a single object or entity require you to join data from multiple tables. As your tables grow in size, the joins can become expensive. However, data in NoSQL databases is typically stored in a way that is optimized for queries. The rule of thumb when you use MongoDB is data that is accessed together should be stored together. Queries typically do not require joins, so the queries are very fast.
 - Easy for developers: Some NoSQL databases like MongoDB map their data structures to those of popular programming languages. This mapping allows developers to store their data in the same way that they use it in their application code. While it may seem like a trivial advantage, this mapping can allow developers to write less code, leading to faster development time and fewer bugs.
 
 **Drawbacks of NoSQL databases**
@@ -231,7 +231,7 @@ Models can be used to perform a wide range of operations on a MongoDB database, 
 
 ## JWT
 
-JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID and microservice architecture to share user-related information.
+JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it’s an encoded JSON containing a set of claims and a signature. It’s usually used in the context of other authentication mechanisms like OAuth, OpenID, and microservice architecture to share user-related information.
 
 <img src="uploads/jwts.png" width="500" height="500"/>
 
