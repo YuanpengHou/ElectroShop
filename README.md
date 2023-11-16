@@ -236,6 +236,13 @@ JWT, or JSON Web Token, is an open standard used to share information between tw
 
 JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a client-side-based stateless session, this means the server doesn’t have to completely rely on a data store (or) database to save session information. JWTs can be encrypted, but they are typically encoded & signed.  We will be focusing on Signed JWTs. The purpose of Signed JWT is not to hide the data but to ensure the authenticity of the data. And that is why it’s highly recommended to use HTTPS with Signed JWTs.
 
+
+什么时候使用JWT authentication(when)
+
+授权：一旦用户登录，每个后续请求将包括JWT，从而允许用户访问该令牌允许的路由，服务和资源。单一登录是当今广泛使用JWT的一项功能，因为它的开销很小并且可以在不同的域中轻松使用。这也是JWT最常见的方案。
+
+信息交换：JSON Web令牌是各方之间安全地传输信息的好办法。对JWT进行签名，所以您可以确保发件人是他们所说的人。由于，签名可以设置有效时长，可以验证内容是否遭到篡改。
+
 <img src="uploads/jwt.jpg" width="600" height="350"/>
 
 The JWT authorization workflow is as follows:
@@ -247,6 +254,20 @@ If the user credentials are invalid, API Gateway returns a specific error respon
 4. When the client sends a request again, it sends the generated JSON token in the **HTTP Authorization request header** as a Bearer token to access the protected API in API Gateway.
 5. API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the **public certificate of the issuer**.
 6.  (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources. If the validation fails, API Gateway returns a specific error response.
+
+JWT 的几个特点
+
+（1）JWT 默认是不加密，但也是可以加密的。生成原始 Token 以后，可以用密钥再加密一次。
+
+（2）JWT 不加密的情况下，不能将秘密数据写入 JWT。
+
+（3）JWT 不仅可以用于认证，也可以用于交换信息。有效使用 JWT，可以降低服务器查询数据库的次数。
+
+（4）JWT 的最大缺点是，由于服务器不保存 session 状态，因此无法在使用过程中废止某个 token，或者更改 token 的权限。也就是说，一旦 JWT 签发了，在到期之前就会始终有效，除非服务器部署额外的逻辑。
+
+（5）JWT 本身包含了认证信息，一旦泄露，任何人都可以获得该令牌的所有权限。为了减少盗用，JWT 的有效期应该设置得比较短。对于一些比较重要的权限，使用时应该再次对用户进行认证。
+
+（6）为了减少盗用，JWT 不应该使用 HTTP 协议明码传输，要使用 HTTPS 协议传输。
 
 
 ## Test
