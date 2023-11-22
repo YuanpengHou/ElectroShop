@@ -40,11 +40,15 @@ React is a User Interface (UI) library and is a tool for building UI components.
 
 async, await, promise
 
+improve performance, reduce response time, increase throughput, for concurrency situations, avoid cascade failure
+
 cart, order, shipping
 
 **Prop drilling**
 
 redux, state management
+
+Avoid prop drilling, decouple different module and function
 
 ## Redux
 
