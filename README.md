@@ -44,6 +44,8 @@ improve performance, reduce response time, increase throughput, for concurrency 
 
 cart, order, shipping
 
+https://blog.csdn.net/halo1416/article/details/81512033
+
 **Prop drilling**
 
 redux, state management
