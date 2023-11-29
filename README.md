@@ -14,6 +14,7 @@ An eCommerce platform built with the MERN stack & Redux.
 
 **Developer Tools**: Visual Studio Code, Postman, Git/Github, Render Cloud
 
+Frontend/View/视图层 -> Server.js/Backend/服务端 -> Route.js/路由 -> Controller.js/控制层 -> Mongoose/DTO/持久层 -> Mondel/Entity/Object/Data/模型层/实体层/数据层
 
 ## MERN stack
 
