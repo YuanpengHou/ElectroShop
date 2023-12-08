@@ -45,6 +45,10 @@ improve performance, reduce response time, increase throughput, for concurrency 
 
 cart, order, shipping
 
+async的用法&#xff0c: 它作为一个关键字放到函数前面&#xff0c;用于表示函数是一个异步函数&#xff08;async本身就是异步的意思&#xff09;&#xff0c; 异步函数也就意味着该函数的执行不会阻塞后面代码的执行
+其次&#xff0c;await必须在有关键字async的函数中使用
+最后&#xff0c;async 函数返回的是一个promise 对象&#xff0c;如果要获取到promise 返回值&#xff0c;我们应该用then 方法
+
 https://blog.csdn.net/halo1416/article/details/81512033
 
 **Prop drilling**
